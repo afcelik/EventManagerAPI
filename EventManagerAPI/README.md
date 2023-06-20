@@ -35,39 +35,3 @@ To use the API, follow the steps below:
 
 You can use the [Swagger](http://localhost:5022/swagger) interface for detailed documentation of API endpoints and request/response structures.
 
-***TÜRKÇE***
-
-# EventManagerAPI
-
-- Bu projede bir web projesine yönelik etkinlik sayfasýnýn arka tarafý yazýlmýþtýr. 
-- GET,POST,DELETE ve PUT istekleri kullanýlmýþtýr.
-- Veritabanýnda 4 tabloya yer verilmiþtir. Bunlar model klasöründe tanýmlanmýþ ve entity framework kullanýlarak codefirst yaklaþýmýyla veritabanýna aktarýlmýþtýr.
-
-## Gereksinimler
-
-- .NET Framework 6.0.18
-- Ýnternet baðlantýsý
-
-## Kurulum
-
-1. Projeyi indirin veya klonlayýn.
-2. Proje dizinine gidin.
-3. Terminalde aþaðýdaki komutlarý çalýþtýrýn:
-
-dotnet restore
-dotnet build
-dotnet run
-
-4. API þu adreste çalýþacak: http://localhost:5022
-
-## Kullaným
-
-API'yi kullanmak için aþaðýdaki adýmlarý takip edin:
-
-1. Ýstekleri göndermek için uygun bir HTTP istemcisi kullanýn (ör. Postman).
-2. API endpointlerini kullanarak istekleri oluþturun ve gönderin.
-3. Cevaplarý kontrol edin ve iþlemleri gerçekleþtirin.
-
-## API Dokümantasyonu
-
-API endpointlerinin ve istek/cevap yapýlarýnýn detaylý dokümantasyonu için [Swagger](http://localhost:5022/swagger) arayüzünü kullanabilirsiniz.
