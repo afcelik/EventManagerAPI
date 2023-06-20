@@ -1,5 +1,3 @@
-***ENGLISH***
-
 # EventManagerAPI
 
 - In this project, the back side of the activity page for a web project was written.
