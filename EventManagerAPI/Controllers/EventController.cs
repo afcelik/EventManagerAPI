@@ -27,9 +27,9 @@ namespace EventManagerAPI.Controllers
                 EventEndDate = x.EventEndDate,
                 IsEventPaid = x.IsEventPaid,
                 EventPrice = (decimal)x.EventPrice,
-                EventImage1 = x.EventImage1,
-                EventImage2 = x.EventImage2,
-                EventImage3 = x.EventImage3,
+                EventImageUrlOne = x.EventImageUrlOne,
+                EventImageUrlTwo = x.EventImageUrlTwo,
+                EventImageUrlThree = x.EventImageUrlThree,
 
             }).ToList();
 
@@ -60,9 +60,9 @@ namespace EventManagerAPI.Controllers
                 data.EventEndDate = activity.EventEndDate;
                 data.IsEventPaid = activity.IsEventPaid;
                 data.EventPrice = (decimal)activity.EventPrice;
-                data.EventImage1 = activity.EventImage1;
-                data.EventImage2 = activity.EventImage2;
-                data.EventImage3 = activity.EventImage3;
+                data.EventImageUrlOne = activity.EventImageUrlOne;
+                data.EventImageUrlTwo = activity.EventImageUrlTwo;
+                data.EventImageUrlThree = activity.EventImageUrlThree;
                 
                 return Ok(data);
             }
@@ -82,9 +82,9 @@ namespace EventManagerAPI.Controllers
                 EventEndDate = request.EventEndDate,
                 IsEventPaid = request.IsEventPaid,
                 EventPrice = request.EventPrice,
-                EventImage1 = request.EventImage1,
-                EventImage2 = request.EventImage2,
-                EventImage3 = request.EventImage3,
+                EventImageUrlOne = request.EventImageUrlOne,
+                EventImageUrlTwo = request.EventImageUrlTwo,
+                EventImageUrlThree = request.EventImageUrlThree,
             };
 
             context.Events.Add(activity);
@@ -128,9 +128,9 @@ namespace EventManagerAPI.Controllers
                 existingActivity.EventEndDate = Event.EventEndDate;
                 existingActivity.IsEventPaid = Event.IsEventPaid;
                 existingActivity.EventPrice = Event.EventPrice;
-                existingActivity.EventImage1 = Event.EventImage1;
-                existingActivity.EventImage2 = Event.EventImage2;
-                existingActivity.EventImage3 = Event.EventImage3;
+                existingActivity.EventImageUrlOne = Event.EventImageUrlOne;
+                existingActivity.EventImageUrlTwo = Event.EventImageUrlTwo;
+                existingActivity.EventImageUrlThree = Event.EventImageUrlThree;
 
 
                 context.SaveChanges();
@@ -151,9 +151,9 @@ namespace EventManagerAPI.Controllers
                 EventEndDate = x.EventEndDate,
                 IsEventPaid = x.IsEventPaid,
                 EventPrice = (decimal)x.EventPrice,
-                EventImage1 = x.EventImage1,
-                EventImage2 = x.EventImage2,
-                EventImage3 = x.EventImage3,
+                EventImageUrlOne = x.EventImageUrlOne,
+                EventImageUrlTwo = x.EventImageUrlTwo,
+                EventImageUrlThree = x.EventImageUrlThree,
 
             }).ToList();
             return Ok(response);

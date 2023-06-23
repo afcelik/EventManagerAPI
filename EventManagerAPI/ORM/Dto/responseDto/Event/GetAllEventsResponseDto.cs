@@ -12,9 +12,9 @@
         public DateTime EventEndDate { get; set; }
         public bool IsEventPaid { get; set; }
         public decimal? EventPrice { get; set; }
-        public byte[]? EventImage1 { get; set; }
-        public byte[]? EventImage2 { get; set; }
-        public byte[]? EventImage3 { get; set; }
+        public string? EventImageUrlOne { get; set; }
+        public string? EventImageUrlTwo { get; set; }
+        public string? EventImageUrlThree { get; set; }
 
     }
 }
