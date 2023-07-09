@@ -6,7 +6,7 @@ namespace EventManagerAPI.ORM.Models
     {
         [Key]
         public int PlaceId { get; set; }
-        public string PlaceName { get; set; }
+        public string? PlaceName { get; set; }
         public string PlaceAddress { get; set; }
         public virtual ICollection<Event> Events { get; }
 

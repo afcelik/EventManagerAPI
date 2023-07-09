@@ -188,6 +188,13 @@ namespace EventManagerAPI.Controllers
         [HttpPost]
         public IActionResult AddEvent(AddEventRequestDto request)
         {
+            var place = context.Places.FirstOrDefault(p => p.PlaceId == request.PlaceId);
+
+            if (place == null)
+            {
+                return BadRequest("Invalid PlaceId");
+            }
+
             var activity = new Event
             {
                 EventTitle = request.EventTitle,
@@ -203,14 +210,15 @@ namespace EventManagerAPI.Controllers
                 EventImageUrlOne = request.EventImageUrlOne,
                 EventImageUrlTwo = request.EventImageUrlTwo,
                 EventImageUrlThree = request.EventImageUrlThree,
+                PlaceName = place.PlaceName
             };
 
             context.Events.Add(activity);
             context.SaveChanges();
 
             return Created("OK", request);
-
         }
+
         [HttpDelete("{id}")]
         public IActionResult DeleteEvent(int id)
         {
