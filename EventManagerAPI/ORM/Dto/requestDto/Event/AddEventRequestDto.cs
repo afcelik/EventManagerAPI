@@ -14,5 +14,6 @@
         public string? EventImageUrlOne { get; set; }
         public string? EventImageUrlTwo { get; set; }
         public string? EventImageUrlThree { get; set; }
+        public string EventCity { get; internal set; }
     }
 }

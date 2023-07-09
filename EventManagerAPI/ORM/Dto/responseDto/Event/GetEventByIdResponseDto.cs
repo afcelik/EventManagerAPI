@@ -6,6 +6,7 @@
         public string EventTitle { get; set; }
         public string EventPerson { get; set; }
         public string EventCategory { get; set; }
+        public string? EventCity { get; set; }
         public string EventDescription { get; set; }
         public int PlaceId { get; set; }
         public DateTime EventStartingDate { get; set; }

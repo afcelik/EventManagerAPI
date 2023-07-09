@@ -14,4 +14,5 @@ namespace EventManagerAPI.ORM.Context
         public DbSet<Place> Places { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
     }
+
 }

@@ -1,5 +1,6 @@
 ﻿using EventManagerAPI.ORM.Context;
 using EventManagerAPI.ORM.Dto.requestDto.Place;
+using EventManagerAPI.ORM.Dto.responseDto.Event;
 using EventManagerAPI.ORM.Dto.responseDto.Place;
 using EventManagerAPI.ORM.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,25 @@ namespace EventManagerAPI.Controllers
             return Ok(data);
 
         }
+
+        [HttpGet("places-list")]
+        public IActionResult GetCitiesList()
+        {
+            var places = context.Places
+                .Select(x => new GetAllPlaceNamesResponseDto
+                {
+                    PlaceName = x.PlaceName
+                })
+                .ToList();
+
+            var groupedData = places
+                .GroupBy(x => x.PlaceName)
+                .Select(x => x.First())
+                .ToList();
+
+            return Ok(groupedData);
+        }
+
         [HttpGet("{id}")]
         public IActionResult GetPlace(int id)
         {

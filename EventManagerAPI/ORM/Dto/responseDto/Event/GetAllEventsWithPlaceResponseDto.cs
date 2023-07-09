@@ -1,20 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace EventManagerAPI.ORM.Models
+﻿namespace EventManagerAPI.ORM.Dto.responseDto.Event
 {
-    public class Event
+    public class GetAllEventsWithPlaceResponseDto
     {
-        [Key]
         public int EventId { get; set; }
         public string EventTitle { get; set; }
         public string EventPerson { get; set; }
         public string EventCategory { get; set; }
         public string? EventCity { get; set; }
         public string EventDescription { get; set; }
-        [ForeignKey("PlaceId")]
         public int PlaceId { get; set; }
-        public virtual Place Places { get; set; }
         public DateTime EventStartingDate { get; set; }
         public DateTime EventEndDate { get; set; }
         public bool IsEventPaid { get; set; }
@@ -22,9 +16,8 @@ namespace EventManagerAPI.ORM.Models
         public string? EventImageUrlOne { get; set; }
         public string? EventImageUrlTwo { get; set; }
         public string? EventImageUrlThree { get; set; }
-        [NotMapped]
-        public Ticket Ticket { get; set; }
-        public List<Ticket> Tickets { get; set; }
-        public string PlaceName { get; internal set; }
+        public string PlaceName { get; set; }
+
     }
 }
+
